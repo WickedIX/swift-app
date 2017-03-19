@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12117" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12084"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_app_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WickedIX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwj-Ff-t8N">
+                                <rect key="frame" x="151" y="70" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WB7-OZ-3q4">
+                                <rect key="frame" x="157.5" y="141" width="60" height="30"/>
+                                <state key="normal" title="Push Me"/>
+                                <connections>
+                                    <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pi0-fp-r2V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFW-Jc-15V">
+                                <rect key="frame" x="140.5" y="321" width="94" height="30"/>
+                                <state key="normal" title="Push Me Too!"/>
+                                <connections>
+                                    <action selector="PressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqv-lP-5go"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fFW-Jc-15V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ua-tU-nCq"/>
+                            <constraint firstItem="WB7-OZ-3q4" firstAttribute="top" secondItem="gwj-Ff-t8N" secondAttribute="bottom" constant="50" id="7OS-GC-1Lu"/>
+                            <constraint firstItem="WB7-OZ-3q4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hss-3Y-xuE"/>
+                            <constraint firstItem="gwj-Ff-t8N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="LJu-mn-0t1"/>
+                            <constraint firstItem="gwj-Ff-t8N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lsp-Ui-3bi"/>
+                            <constraint firstItem="fFW-Jc-15V" firstAttribute="top" secondItem="WB7-OZ-3q4" secondAttribute="bottom" constant="150" id="sDJ-fb-niz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="theLabel" destination="gwj-Ff-t8N" id="wYP-vt-hJ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
