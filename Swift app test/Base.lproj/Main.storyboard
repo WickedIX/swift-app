@@ -34,25 +34,40 @@
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pi0-fp-r2V"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFW-Jc-15V">
-                                <rect key="frame" x="140.5" y="321" width="94" height="30"/>
-                                <state key="normal" title="Push Me Too!"/>
-                                <connections>
-                                    <action selector="PressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqv-lP-5go"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IbF-Uq-Bu6">
+                                <rect key="frame" x="137.5" y="201" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="SWp-Du-Ehd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W5o-md-dra">
+                                <rect key="frame" x="137.5" y="261" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Bie-cU-qpe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fFW-Jc-15V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ua-tU-nCq"/>
                             <constraint firstItem="WB7-OZ-3q4" firstAttribute="top" secondItem="gwj-Ff-t8N" secondAttribute="bottom" constant="50" id="7OS-GC-1Lu"/>
+                            <constraint firstItem="W5o-md-dra" firstAttribute="top" secondItem="IbF-Uq-Bu6" secondAttribute="bottom" constant="30" id="G8z-iB-yQD"/>
                             <constraint firstItem="WB7-OZ-3q4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hss-3Y-xuE"/>
                             <constraint firstItem="gwj-Ff-t8N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="LJu-mn-0t1"/>
+                            <constraint firstItem="IbF-Uq-Bu6" firstAttribute="top" secondItem="WB7-OZ-3q4" secondAttribute="bottom" constant="30" id="MYK-Qm-A6C"/>
                             <constraint firstItem="gwj-Ff-t8N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lsp-Ui-3bi"/>
-                            <constraint firstItem="fFW-Jc-15V" firstAttribute="top" secondItem="WB7-OZ-3q4" secondAttribute="bottom" constant="150" id="sDJ-fb-niz"/>
+                            <constraint firstItem="W5o-md-dra" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ovo-5G-mTt"/>
+                            <constraint firstItem="IbF-Uq-Bu6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pja-ji-NRN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="IbF-Uq-Bu6" id="vnQ-nf-Xji"/>
+                        <outlet property="text2" destination="W5o-md-dra" id="kJp-J6-fht"/>
                         <outlet property="theLabel" destination="gwj-Ff-t8N" id="wYP-vt-hJ9"/>
                     </connections>
                 </viewController>
